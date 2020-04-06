@@ -1,0 +1,114 @@
+[debug] [2020-04-06T18:22:53.935Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T18:22:53.937Z] Command:       /home/ivan/.nvm/versions/node/v12.13.1/bin/node /home/ivan/.nvm/versions/node/v12.13.1/bin/firebase init
+[debug] [2020-04-06T18:22:53.938Z] CLI Version:   8.0.1
+[debug] [2020-04-06T18:22:53.938Z] Platform:      linux
+[debug] [2020-04-06T18:22:53.938Z] Node Version:  v12.13.1
+[debug] [2020-04-06T18:22:53.938Z] Time:          Mon Apr 06 2020 13:22:53 GMT-0500 (Colombia Standard Time)
+[debug] [2020-04-06T18:22:53.938Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T18:22:53.939Z] 
+[debug] [2020-04-06T18:22:53.944Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-06T18:22:53.945Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ivan/Documents/react-shopping-cart
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using react-shopping-cart-67954.
+[debug] [2020-04-06T18:24:20.502Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-06T18:24:20.502Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-06T18:24:20.867Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 06 Apr 2020 18:24:20 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-06T18:24:20.919Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/react-shopping-cart-67954  
+ 
+[debug] [2020-04-06T18:24:21.575Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Mon, 06 Apr 2020 18:24:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-06T18:24:21.577Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-06T18:24:21.584Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-06T18:24:21.885Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/lib/api.js:40:35)
+    at Request.self.callback (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:299:28)
+    at IncomingMessage.emit (events.js:215:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1184:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to get Firebase project react-shopping-cart-67954. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-04-06T18:25:00.006Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T18:25:00.008Z] Command:       /home/ivan/.nvm/versions/node/v12.13.1/bin/node /home/ivan/.nvm/versions/node/v12.13.1/bin/firebase init
+[debug] [2020-04-06T18:25:00.008Z] CLI Version:   8.0.1
+[debug] [2020-04-06T18:25:00.008Z] Platform:      linux
+[debug] [2020-04-06T18:25:00.008Z] Node Version:  v12.13.1
+[debug] [2020-04-06T18:25:00.009Z] Time:          Mon Apr 06 2020 13:25:00 GMT-0500 (Colombia Standard Time)
+[debug] [2020-04-06T18:25:00.009Z] ----------------------------------------------------------------------
+[debug] [2020-04-06T18:25:00.009Z] 
+[debug] [2020-04-06T18:25:00.016Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-06T18:25:00.016Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/ivan/Documents/react-shopping-cart
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using react-shopping-cart-67954.
+[debug] [2020-04-06T18:25:03.656Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/react-shopping-cart-67954  
+ 
+[debug] [2020-04-06T18:25:04.187Z] <<< HTTP RESPONSE 403 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Mon, 06 Apr 2020 18:25:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-06T18:25:04.187Z] <<< HTTP RESPONSE BODY {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2020-04-06T18:25:04.191Z] HTTP Error: 403, The caller does not have permission
+[debug] [2020-04-06T18:25:04.451Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Request._callback (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/lib/api.js:40:35)
+    at Request.self.callback (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at Request.<anonymous> (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1154:10)
+    at Request.emit (events.js:210:5)
+    at Request.EventEmitter.emit (domain.js:475:20)
+    at IncomingMessage.<anonymous> (/home/ivan/.nvm/versions/node/v12.13.1/lib/node_modules/firebase-tools/node_modules/request/request.js:1076:12)
+    at Object.onceWrapper (events.js:299:28)
+    at IncomingMessage.emit (events.js:215:7)
+    at IncomingMessage.EventEmitter.emit (domain.js:475:20)
+    at endReadableNT (_stream_readable.js:1184:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to get Firebase project react-shopping-cart-67954. Please make sure the project exists and your account has permission to access it.

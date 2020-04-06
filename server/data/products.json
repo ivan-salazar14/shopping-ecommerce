@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "id": 12,
+      "sku": "botella_blanco",
+      "title": "Blanco del valle 750ml",
+      "description": "Botella aguardiente 750ml",
+      "availableSizes": [
+        "AGUARDIENTE"
+      ],
+      "style": "Black with custom print",
+      "price": 25000.00,
+      "installments": 4,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true
+    },
+    {
+      "id": 13,
+      "sku": "botella_smirnof",
+      "title": "Smirnoff 750ml",
+      "description": "Botella de vodka",
+      "availableSizes": [
+        "VODKA"
+      ],
+      "style": "Front print and paisley print",
+      "price": 35000.00,
+      "installments": 5,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true
+    },
+    {
+      "id": 14,
+      "sku": "ron_caldas",
+      "title": "Ron Caldas 750ml",
+      "description": "GPX Poly 1",
+      "availableSizes": [
+        "RON"
+      ],
+      "style": "Ron viejo caldas x 750ml",
+      "price": 30000.00,
+      "installments": 3,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true
+    },
+    {
+      "id": 15,
+      "sku": "don_julio",
+      "title": "Don Julio 750ml",
+      "description": "Treino 2014",
+      "availableSizes": [
+        "TEQUILA"
+      ],
+      "style": "Botella 750ml reposado",
+      "price": 120000.00,
+      "installments": 5,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isFreeShipping": true
+    }
+  ]
+}
