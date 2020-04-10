@@ -3,7 +3,7 @@ import React from 'react';
 const StarButton = () => (
   <div className="star-button-container">
     <a
-      className="github-button"
+      className="whatsbutton"
       href="intent://send/+573116405335#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"
       data-icon="octicon"
       data-size="large"

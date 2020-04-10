@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { loadCart, removeProduct, changeProductQuantity } from '../../services/cart/actions';
+import { loadCart, saveSale, removeProduct, changeProductQuantity } from '../../services/cart/actions';
 import { updateCart } from '../../services/total/actions';
 import CartProduct from './CartProduct';
 import { formatPrice } from '../../services/util';
@@ -12,6 +12,7 @@ import './style.scss';
 class FloatCart extends Component {
   static propTypes = {
     loadCart: PropTypes.func.isRequired,
+    saveSale: PropTypes.func.isRequired,
     updateCart: PropTypes.func.isRequired,
     cartProducts: PropTypes.array.isRequired,
     newProduct: PropTypes.object,
@@ -19,11 +20,17 @@ class FloatCart extends Component {
     productToRemove: PropTypes.object,
     changeProductQuantity: PropTypes.func,
     productToChange: PropTypes.object,
+    //  infoBuyer: PropTypes.object
   };
-
-  state = {
-    isOpen: false
-  };
+  constructor() {
+    super();
+    this.state = {
+      isOpen: false,
+      name: '',
+      phone: 0,
+      address: ''
+    };
+  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.newProduct !== this.props.newProduct) {
@@ -81,19 +88,30 @@ class FloatCart extends Component {
       totalPrice,
       productQuantity,
       currencyFormat,
-      currencyId
+      currencyId,
     } = this.props.cartTotal;
 
-    if (!productQuantity) {
-      alert('Add some product in the cart!');
-    } else {
-      alert(
-        `Checkout - Subtotal: ${currencyFormat} ${formatPrice(
-          totalPrice,
-          currencyId
-        )}`
-      );
-    }
+    if (!this.state.name) {
+      alert('Registra por favor el nombre de la persona que recibe el pedido!');
+    } else
+      if (!this.state.phone) {
+        alert('Registra por favor el numero de telefono!');
+      } else
+        if (!this.state.address) {
+          alert('Registra por favor la dirección!');
+        } else
+          if (!productQuantity) {
+            alert('Add some product in the cart!');
+          } else {
+
+            saveSale(this.state.address, this.state.phone, this.state.name, totalPrice, productQuantity, this.props.cartProducts)
+            alert(
+              `Pedido registrado, en minutos lo tendremos en tu casa. - Subtotal: ${currencyFormat} ${formatPrice(
+                totalPrice,
+                currencyId
+              )}`
+            );
+          }
   };
 
   changeProductQuantity = changedProduct => {
@@ -105,6 +123,11 @@ class FloatCart extends Component {
       this.removeProduct(product);
     }
     updateCart(cartProducts);
+  }
+  handleChange = (e) => {
+    const target = e.target;
+    const name = target.name;
+    this.setState({ [name]: e.target.value });
   }
 
   render() {
@@ -121,7 +144,6 @@ class FloatCart extends Component {
     if (!!this.state.isOpen) {
       classes.push('float-cart--open');
     }
-
     return (
       <div className={classes.join(' ')}>
         {/* If cart open, show close (x) button */}
@@ -163,44 +185,35 @@ class FloatCart extends Component {
           </div>
 
           <div className="float-cart__footer">
-            <div className="sub">TOTAL A PAGAR</div>
-            <div className="sub-price">
-              <p className="sub-price__val">
-                {`${cartTotal.currencyFormat} ${formatPrice(
-                  cartTotal.totalPrice,
-                  cartTotal.currencyId
-                )}`}
-              </p>
-              {/*  <small className="sub-price__installment">
-                {!!cartTotal.installments && (
-                  <span>
-                    {`OR UP TO ${cartTotal.installments} x ${
-                      cartTotal.currencyFormat
-                      } ${formatPrice(
-                        cartTotal.totalPrice / cartTotal.installments,
-                        cartTotal.currencyId
-                      )}`}
-                  </span>
-                )}
-              </small> */}
+            <form>
+              <div className="sub">TOTAL A PAGAR</div>
+              <div className="sub-price">
+                <p className="sub-price__val">
+                  {`${cartTotal.currencyFormat} ${formatPrice(
+                    cartTotal.totalPrice,
+                    cartTotal.currencyId
+                  )}`}
+                </p>
+
+              </div>
+              <div className="inputs">
+                <label>
+                  Nombre:
+                <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                </label>
+                <label>
+                  Direccion:
+                <input type="text" name="address" value={this.state.address} onChange={this.handleChange} />
+                </label>
+                <label>
+                  Telefono:
+                <input type="number" name="phone" value={this.state.phone} onChange={this.handleChange} />
+                </label>
+              </div>
+              <div onClick={() => this.proceedToCheckout()} className="buy-btn">
+                Checkout
             </div>
-            <div className="inputs">
-              <label>
-                Nombre:
-                <input type="text" name="name" />
-              </label>
-              <label>
-                Direccion:
-                <input type="text" name="address" />
-              </label>
-              <label>
-                Telefono:
-                <input type="number" name="phone" />
-              </label>
-            </div>
-            <div onClick={() => this.proceedToCheckout()} className="buy-btn">
-              Checkout
-            </div>
+            </form>
           </div>
         </div>
       </div>

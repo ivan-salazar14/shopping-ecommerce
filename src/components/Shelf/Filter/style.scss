@@ -9,8 +9,23 @@
       margin-bottom: 8px;
       display: inline-block;
     }
+    .whatsbutton{
+      &-icon {
+        width: 20px;
+        height: 20px;
+      background-image: url('../../../static/instagram-icon.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0.3;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+    }
+  
   }
-
+  
   .instagram {
     margin: 20px auto 0 auto;
     text-align: center;

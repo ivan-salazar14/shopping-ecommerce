@@ -8,8 +8,7 @@ import { addProduct } from '../../../../services/cart/actions';
 
 const Product = ({ product, addProduct }) => {
   product.quantity = 1;
-
-  let formattedPrice = formatPrice(product.price, product.currencyId);
+  let formattedPrice = product.price;
 
   let productInstallment;
 
