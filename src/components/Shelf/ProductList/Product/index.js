@@ -44,8 +44,8 @@ const Product = ({ product, addProduct }) => {
       <div className="shelf-item__price">
         <div className="val">
           <small>{product.currencyFormat}</small>
-          <b>{formattedPrice.substr(0, formattedPrice.length - 3)}</b>
-          <span>{formattedPrice.substr(formattedPrice.length - 3, 3)}</span>
+          <b>{formattedPrice}</b>
+          {/* <span>{toString(formattedPrice).substr(formattedPrice.length - 3, 3)}</span> */}
         </div>
         {productInstallment}
       </div>

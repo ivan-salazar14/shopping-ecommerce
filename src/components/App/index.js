@@ -13,7 +13,7 @@ const App = () => (
       <Shelf />
     </main>
     <FloatCart />
-  </React.Fragment>
+  </React.Fragment >
 );
 
 export default App;

@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import Root from './Root';
 import './index.scss';
-import { Route, IndexRoute } from 'react-router';
-import Products from './products';
 import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 ReactDOM.render(
   <BrowserRouter>
     <Root>
       <App />
+      {/*   <Routes /> */}
     </Root>
   </BrowserRouter>,
   document.getElementById('root')

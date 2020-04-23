@@ -12,7 +12,7 @@ import './style.scss';
 class FloatCart extends Component {
   static propTypes = {
     loadCart: PropTypes.func.isRequired,
-    saveSale: PropTypes.func.isRequired,
+    //  saveSale: PropTypes.func.isRequired,
     updateCart: PropTypes.func.isRequired,
     cartProducts: PropTypes.array.isRequired,
     newProduct: PropTypes.object,
@@ -91,17 +91,17 @@ class FloatCart extends Component {
       currencyId,
     } = this.props.cartTotal;
 
-    if (!this.state.name) {
-      alert('Registra por favor el nombre de la persona que recibe el pedido!');
+    if (!productQuantity) {
+      alert('Add some product in the cart!');
     } else
-      if (!this.state.phone) {
-        alert('Registra por favor el numero de telefono!');
+      if (!this.state.name) {
+        alert('Registra por favor el nombre de la persona que recibe el pedido!');
       } else
-        if (!this.state.address) {
-          alert('Registra por favor la dirección!');
+        if (!this.state.phone) {
+          alert('Registra por favor el numero de telefono!');
         } else
-          if (!productQuantity) {
-            alert('Add some product in the cart!');
+          if (!this.state.address) {
+            alert('Registra por favor la dirección!');
           } else {
 
             saveSale(this.state.address, this.state.phone, this.state.name, totalPrice, productQuantity, this.props.cartProducts)
