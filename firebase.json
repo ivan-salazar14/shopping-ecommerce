@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "build",
-    "target": "think14",
     "ignore": [
       "firebase.json",
       "**/.*",

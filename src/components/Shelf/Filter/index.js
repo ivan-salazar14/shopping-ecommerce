@@ -8,7 +8,7 @@ import GithubStarButton from '../../github/StarButton';
 
 import './style.scss';
 
-const availableSizes = ['WHISKY', 'TEQUILA', 'RON', 'AGUARDIENTE', 'VODKA', 'CIGARRILLOS', 'CERVEZA', 'OTROS'];
+const availableSizes = ['WHISKY', 'TEQUILA', 'RON', 'AGUARDIENTE', 'VODKA', 'CIGARRILLOS', 'CERVEZAS', 'GASEOSAS', 'AGUAS', 'ENERGIZANTES', 'PASABOCAS', 'OTROS'];
 
 class Filter extends Component {
   static propTypes = {
