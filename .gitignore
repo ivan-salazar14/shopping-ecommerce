@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 **/.firebaserc
 */npm-debug.log
+src/components/firestore.json
+build

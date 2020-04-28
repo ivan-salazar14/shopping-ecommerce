@@ -11,4 +11,31 @@ const config = {
 };
 firebase.initializeApp(config);
 
+/* 
+var db = firebase.firestore();
+var batch = db.batch();
+let products = [
+    {
+        "id": 139,
+        "sku": "SMIRNOFF_LULO",
+        "title": "SMIRNOFF LULO",
+        "description": "SMIRNOFF_LULO",
+        "availableSizes": [
+            "PASABOCAS"
+        ],
+        "price": 36000,
+        "installments": 0,
+        "currencyId": "USD",
+        "currencyFormat": "$",
+        "isFreeShipping": true
+    }
+]; */
+/* 
+products.forEach((doc) => {
+    batch.set(db.collection('products').doc(), doc);
+})
+
+batch.commit().then(function () {
+});
+ */
 export default firebase;
