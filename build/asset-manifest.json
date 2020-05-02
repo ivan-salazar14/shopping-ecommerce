@@ -1,13 +1,13 @@
 {
   "main.css": "/static/css/main.c55a2ef4.chunk.css",
-  "main.js": "/static/js/main.a47b43be.chunk.js",
-  "main.js.map": "/static/js/main.a47b43be.chunk.js.map",
+  "main.js": "/static/js/main.26e8f102.chunk.js",
+  "main.js.map": "/static/js/main.26e8f102.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
   "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.adc05216.chunk.js": "/static/js/2.adc05216.chunk.js",
-  "static/js/2.adc05216.chunk.js.map": "/static/js/2.adc05216.chunk.js.map",
+  "static/js/2.5d5d11fc.chunk.js": "/static/js/2.5d5d11fc.chunk.js",
+  "static/js/2.5d5d11fc.chunk.js.map": "/static/js/2.5d5d11fc.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.82fd35c4b68f136be0a566f4cf9cd3e0.js": "/precache-manifest.82fd35c4b68f136be0a566f4cf9cd3e0.js",
+  "precache-manifest.1543bfcea346868386eed800c9bf5811.js": "/precache-manifest.1543bfcea346868386eed800c9bf5811.js",
   "service-worker.js": "/service-worker.js",
   "static/css/main.c55a2ef4.chunk.css.map": "/static/css/main.c55a2ef4.chunk.css.map",
   "static/media/ABSOLUT_CITRON_BOTELLA_1.jpg": "/static/media/ABSOLUT_CITRON_BOTELLA_1.a09f8c89.jpg",
@@ -93,5 +93,12 @@
   "static/media/TEQUILA_1800_REPOSADO_BOTELLA_1.jpg": "/static/media/TEQUILA_1800_REPOSADO_BOTELLA_1.b27d196f.jpg",
   "static/media/TEQUILA_1800_SILVER_BOTELLA_1.jpg": "/static/media/TEQUILA_1800_SILVER_BOTELLA_1.6adaf3db.jpg",
   "static/media/TOALLAS_HIGIENICAS_1.jpg": "/static/media/TOALLAS_HIGIENICAS_1.86ca3cf1.jpg",
-  "static/media/style.scss": "/static/media/instagram-icon.7d65a2ea.png"
+  "static/media/baileys_1.jpg": "/static/media/baileys_1.05d773bb.jpg",
+  "static/media/domeq_brandy_1.jpg": "/static/media/domeq_brandy_1.35086c1c.jpg",
+  "static/media/style.scss": "/static/media/instagram-icon.7d65a2ea.png",
+  "static/media/jonnyky_1.jpg": "/static/media/jonnyky_1.7866c889.jpg",
+  "static/media/licoresAdomicilio.jpg": "/static/media/licoresAdomicilio.bd438dd5.jpg",
+  "static/media/piña_colada_1.jpg": "/static/media/piña_colada_1.061a0c51.jpg",
+  "static/media/smirnoff_ice_1.jpg": "/static/media/smirnoff_ice_1.1562554c.jpg",
+  "static/media/smirnoff_ice_red_1.jpg": "/static/media/smirnoff_ice_red_1.06dc3b45.jpg"
 }
