@@ -2,12 +2,28 @@ import React from 'react';
 
 import './style.css';
 
+import Thumb from './../Thumb';
 export default () => (
   <a
-    href="intent://send/+573116405335#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end"
+    href="#"
     className="github-corner"
     aria-label="View source on Github"
   >
+    <img
+      width="280"
+      height="70"
+      viewBox="0 0 250 250"
+      style={{
+        fill: '#151513',
+        color: '#fff',
+        position: 'absolute',
+        top: '0',
+        border: '0',
+        left: '0',
+      }}
+      src={require(`../../static/licoresAdomicilio.jpg`)}
+    />
+    {/* 
     <svg
       width="80"
       height="80"
@@ -36,5 +52,5 @@ export default () => (
         className="octo-body"
       />
     </svg>
-  </a>
+ */}  </a>
 );
