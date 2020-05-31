@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Thumb from './../../Thumb';
 import { formatPrice } from '../../../services/util';
+import { storageRef } from '../../firestore';
 
 class CartProduct extends Component {
   static propTypes = {
@@ -15,7 +16,8 @@ class CartProduct extends Component {
     super(props);
     this.state = {
       product: this.props.product,
-      isMouseOver: false
+      isMouseOver: false,
+      image: null
     };
   }
 
@@ -41,16 +43,26 @@ class CartProduct extends Component {
     changeProductQuantity(product);
   }
 
+  renderImage(nameImage) {
+    let image_path = '';
+    try {
+      image_path = require(`../../../../static/products/${nameImage}_1.jpg`);
+      return image_path;
+    } catch (err) {
+      return 'https://firebasestorage.googleapis.com/v0/b/think14.appspot.com/o/images%2F' + nameImage + '.jpg?alt=media'
+    }
+
+  }
+
   render() {
     const { removeProduct } = this.props;
     const { product } = this.state;
-
+    //  this.getImage(product.sku + '.jpg')
     const classes = ['shelf-item'];
 
     if (!!this.state.isMouseOver) {
       classes.push('shelf-item--mouseover');
     }
-
     return (
       <div className={classes.join(' ')}>
         <div
@@ -61,7 +73,7 @@ class CartProduct extends Component {
         />
         <Thumb
           classes="shelf-item__thumb"
-          src={require(`../../../static/products/${product.sku}_1.jpg`)}
+          src={this.renderImage(product.sku)}
           alt={product.title}
         />
         <div className="shelf-item__details">

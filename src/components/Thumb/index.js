@@ -6,7 +6,7 @@ const Thumb = props => (
     <img src={props.src} alt={props.alt} title={props.title} />
   </div>
 );
-
+//height={150} width={150}
 Thumb.propTypes = {
   alt: PropTypes.string,
   title: PropTypes.string,
