@@ -25,7 +25,8 @@ export const fetchProducts = (filters, sortBy, callback) => async dispatch => {
 
     if (!!filters && filters.length > 0) {
       products = products.filter(p =>
-        filters.find(f => p.availableSizes.find(size => size === f))
+        filters.find(f => 
+          Array.isArray(p.availableSizes)?p.availableSizes.find(size => size === f):f===p.availableSizes)
       );
     }
 
